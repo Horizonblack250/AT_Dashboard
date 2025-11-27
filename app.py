@@ -185,10 +185,11 @@ if len(p2_data) > 0:
     ax.plot(x_vals, pdf_scaled)
 
     ax.axvline(mean_p2, linestyle="-", label=f"Mean={mean_p2:.3f}")
-    ax.axvline(UCL, "--", label=f"UCL={UCL:.3f}")
-    ax.axvline(LCL, "--", label=f"LCL={LCL:.3f}")
-    ax.axvline(kpis["USL"], ":", label=f"USL={kpis['USL']:.3f}")
-    ax.axvline(kpis["LSL"], ":", label=f"LSL={kpis['LSL']:.3f}")
+    ax.axvline(UCL, linestyle="--", label=f"UCL={UCL:.3f}")
+    ax.axvline(LCL, linestyle="--", label=f"LCL={LCL:.3f}")
+    ax.axvline(kpis["USL"], linestyle=":", label=f"USL={kpis['USL']:.3f}")
+    ax.axvline(kpis["LSL"], linestyle=":", label=f"LSL={kpis['LSL']:.3f}")
+
 
     ax.set_title("Outlet Pressure P2 (barg)")
     ax.set_xlabel("P2 Value")
